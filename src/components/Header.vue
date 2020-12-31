@@ -21,10 +21,36 @@
 </template>
 
 <script>
-export default {
-  name:"app-header",
-}
+  export default {
+    name:"app-header",
+  }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+  .header {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  .logo {
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  .logo_container {
+    width:50px;
+    height:50px;
+  }
+  .logo_image {
+    max-width: 100%;
+    max_height: 100%;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    justify-content: space-between;
+  }
 </style>
