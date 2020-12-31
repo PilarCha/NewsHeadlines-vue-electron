@@ -11,7 +11,7 @@
   export default {
     name: 'layout',
     components: {
-      appHeader
+      appHeader,
     },
   };
 </script>

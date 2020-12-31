@@ -45,7 +45,7 @@
   }
   .logo_image {
     max-width: 100%;
-    max_height: 100%;
+    max-height: 100%;
   }
   .nav {
     display: flex;
