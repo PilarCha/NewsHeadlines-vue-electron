@@ -39,9 +39,35 @@ export default {
         rootMargin: "0px",
         threshold: 0.1,
       };
-    }
-  }
-}
+      const fetchImage = (url) => {
+        return new Promise((resilve, reject) => {
+          const image = new Image();
+          image.src = url;
+          image.onload = resolve;
+          image.onerror = reject;
+        });
+      };
+      const loadImage = (image) => {
+        const src = image.dataset.src;
+        fetchImage(src).then(() => {
+          image.src = src;
+        });
+      };
+      const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+          if(entry.intersectionRatio > 0) {
+            loadImage(entry.target);
+          }
+        });
+      };
+      //Observer for images
+      const observer = new IntersentionObserver(handleIntersention, options);
+      images.forEach((img) =>{
+        observer.observe(img);
+      });
+    },
+  },
+};
 </script>
 
 <style lang="css">
