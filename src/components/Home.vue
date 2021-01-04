@@ -22,7 +22,7 @@ export default {
       articles: "",
       countryInfo: "",
     };
-  };
+  },
   components: {
     NewsCard,
   },

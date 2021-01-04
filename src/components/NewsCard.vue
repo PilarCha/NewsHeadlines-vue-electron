@@ -40,7 +40,7 @@ export default {
         threshold: 0.1,
       };
       const fetchImage = (url) => {
-        return new Promise((resilve, reject) => {
+        return new Promise((resolve, reject) => {
           const image = new Image();
           image.src = url;
           image.onload = resolve;
@@ -61,7 +61,7 @@ export default {
         });
       };
       //Observer for images
-      const observer = new IntersentionObserver(handleIntersention, options);
+      const observer = new IntersectionObserver(handleIntersection, options);
       images.forEach((img) =>{
         observer.observe(img);
       });
