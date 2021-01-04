@@ -43,6 +43,7 @@ export default {
       let { data } = await this.getTopNews(
         this.countries[countryIdx].value
       );
+      console.log(this.countries.value)
       this.articles = data.articles;
     },
   },
