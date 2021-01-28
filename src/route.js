@@ -4,9 +4,11 @@ import homePage from './components/Home.vue';
 
 Vue.use(VueRouter);
 
-export const routes = [
+const routes = [
   {
     path: '/',
     component: homePage
   },
 ]
+
+export default routes

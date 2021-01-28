@@ -26,7 +26,8 @@ export default {
   components: {
     NewsCard,
   },
-  mounted() {
+  // used to fetch data asap
+  mounted() {    
     this.fetchTopNews();
   },
   computed: {
@@ -43,7 +44,6 @@ export default {
       let { data } = await this.getTopNews(
         this.countries[countryIdx].value
       );
-      console.log(this.countries.value)
       this.articles = data.articles;
     },
   },

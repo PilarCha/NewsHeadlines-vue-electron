@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import axios from '../plugins/axios';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
@@ -45,3 +45,5 @@ const store = new Vuex.Store({
   },
 });
 export default store;
+
+console.log(res);
